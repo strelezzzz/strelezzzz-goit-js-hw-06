@@ -30,7 +30,7 @@ button {
   align-items: center;
 }
 
-#validation-input {
+/* #validation-input {
   border: 3px solid #bdbdbd;
 }
 
@@ -40,4 +40,4 @@ button {
 
 #validation-input.invalid {
   border-color: #f44336;
-}
+} */
