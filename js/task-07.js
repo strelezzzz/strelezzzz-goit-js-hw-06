@@ -9,9 +9,9 @@
 const control = document.querySelector("#font-size-control");
 
 const text = document.getElementById("text");
-console.log(text);
+// console.log(text);
 
-control.addEventListener("onClick",(event) => {
-    text.style.fontSize = event.currentTarget.value;
-    console.log(event.value);
+control.addEventListener("input",(event) => {
+    text.style.fontSize = event.currentTarget.value +'px';
+    console.log(event.currentTarget.value +'px');
 })
