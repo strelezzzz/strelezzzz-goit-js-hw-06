@@ -16,14 +16,24 @@
 //    3) Оновлюй інтерфейс новим значенням змінної counterValue.
 
 let counterValue = 0;
-
+let value = document.querySelector("#value");
 const decrementBtn = document.querySelector('[data-action="decrement"]');
 // console.log(decrementBtn);
 const incrementBtn = document.querySelector('[data-action="increment"]');
 // console.log(incrementBtn);
 
-decrementBtn.addEventListener('click',onTargetButtonClick);
+decrementBtn.addEventListener('click',onTargetButtonClickDec);
 
-function onTargetButtonClick(){
-    console.log('Click');
+incrementBtn.addEventListener('click', onTargetButtonClickInc);
+
+function onTargetButtonClickInc(){
+    // console.log('Click');
+    counterValue += 1;
+    value.textContent = counterValue;
+}
+
+function onTargetButtonClickDec(){
+    // console.log('Click');
+    counterValue -= 1;
+    value.textContent = counterValue;
 }
