@@ -14,16 +14,18 @@
 //     якщо неправильна кількість - червоним.
 
 const textInput = document.querySelector("#validation-input");
+// textInput.classList.add("invalid");
 
 textInput.addEventListener("blur", () => {
     if (textInput.value.length == textInput.dataset.length) { 
         textInput.classList.remove("invalid");
         textInput.classList.add("valid");
+        // textInput.classList.replace("invalid", "valid");
         
     }
     else {
         textInput.classList.remove("valid");
         textInput.classList.add("invalid");
-        
+        // textInput.classList.replace("valid", "invalid");
     };
 });
