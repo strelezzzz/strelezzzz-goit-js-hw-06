@@ -12,8 +12,23 @@ function getRandomHexColor() {
 
 // Для генерування випадкового кольору використовуй функцію getRandomHexColor.
 
-// function getRandomHexColor() {
+// function getRandomHexColors() {
 //   return `#${Math.floor(Math.random() * 16777215)
 //     .toString(16)
 //     .padStart(6, 0)}`;
 // }
+
+const changeColorBtn = document.querySelector(".change-color");
+console.log(changeColorBtn);
+const colorName = document.querySelector(".color");
+const widget = document.querySelector(".widget");
+
+changeColorBtn.addEventListener("click", handleClick);
+
+function handleClick(event) {
+  
+  widget.style.backgroundColor = getRandomHexColor();
+  colorName.textContent = widget.style.backgroundColor;
+  console.log(event);
+  console.log(widget.style.backgroundColor);
+}
